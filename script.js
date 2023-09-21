@@ -1,43 +1,4 @@
 
-//1. Funkciją, kuri paverčia žmogaus metus į šuns metus:
-//1.1. Funkcija priima vieną parametrą: žmogaus amžius.
-//1.2. Funkcija grąžina atsakymą tokiu formatu:
-// 5 žmogaus metai yra 35 šuns metai.
-
-console.groupCollapsed('Math operator')
-// Matematiniai operatoriai
-let žmogus = 7
-let šuo = 1
-let intervalas = '1'
-
-console.log(žmogus + šuo)
-console.log(žmogus - šuo)
-console.log(žmogus / šuo)
-console.log(žmogus * šuo)
-console.log(žmogus % šuo)
-
-console.log(žmogus + šuo * šuo)
-console.log((žmogus + šuo) * šuo)
-
-console.log(žmogus + intervalas)
-console.log(žmogus - intervalas)
-console.log(žmogus * intervalas)
-console.log(žmogus / intervalas)
-console.log(žmogus % intervalas)
-
-console.log(žmogus + intervalas * intervalas)
-console.log(1 + '1' * '7')
-console.log(22 + 100)
-console.log(122)
-
-console.log((žmogus + intervalas) * intervalas)
-console.log((22 + '10') * '10')
-console.log('2210' * '10')
-console.log(22100)
-
-console.groupEnd()
-
-
 console.groupCollapsed('JS_task_functions_1_1')
 
 var age = window.prompt('Enter your age');
