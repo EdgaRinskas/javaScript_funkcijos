@@ -81,7 +81,7 @@ console.groupEnd()
 
 console.groupCollapsed('JS_task_functions_1_4')
 
-function dayToWeeks
+function 
 
 
 
