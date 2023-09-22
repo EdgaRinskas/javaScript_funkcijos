@@ -81,3 +81,68 @@ function monthsToMinutes(months) {
 }
 console.log(monthsToMinutes(3))
 console.groupEnd()
+
+console.groupCollapsed('JS_task_functions_1_8')
+
+function monthsToMinutes(months) {
+  let minutes = months * 30 * 24 * 60
+  let output = `${months} mėnesiai turi ${minutes} minutes.`
+
+  return output
+}
+
+console.groupEnd()
+
+
+console.groupCollapsed('JS_task_functions_1_9')
+
+
+
+function arDalinasiIs(dalmuo, daliklis) {
+  if (typeof dalmuo !== 'number' || typeof daliklis !== 'number') {
+    throw new Error('Abi parametrai turi būti skaičiai.');
+  }
+
+  if (daliklis === 0) {
+    throw new Error('Negalima dalyti iš nulio.');
+  }
+
+  return dalmuo % daliklis === 0;
+}
+
+const ivestasSkaicius = 11;
+const daliklisSkaicius = 2;
+
+try {
+  const rezultatas = arDalinasiIs(ivestasSkaicius, daliklisSkaicius);
+
+  if (rezultatas) {
+    console.log(`${ivestasSkaicius} dalinasi iš ${daliklisSkaicius}`);
+  } else {
+    console.log(`${ivestasSkaicius} nesidalina iš ${daliklisSkaicius}`);
+  }
+} catch (klaida) {
+  console.error(klaida.message);
+}
+
+console.groupEnd()
+
+
+
+
+console.groupCollapsed('JS_task_functions_1_10');
+
+function isEvenLength(text) {
+  return text.length % 2 === 0;
+}
+
+const inputText = "tekstas!";
+const result = isEvenLength(inputText);
+
+if (result) {
+  console.log("even");
+} else {
+  console.log("odd");
+}
+
+console.groupEnd('JS_task_functions_1_10');
