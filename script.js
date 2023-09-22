@@ -53,7 +53,6 @@ console.groupCollapsed('JS_task_functions_1_5')
 function yearsToHours(years) {
   let hours = years * 365 * 24
   let output = `${years} metai turi ${hours} valandas.`
-
   return output
 }
 console.log(yearsToHours(2))
@@ -76,74 +75,57 @@ console.groupCollapsed('JS_task_functions_1_7')
 function monthsToMinutes(months) {
   let minutes = months * 30 * 24 * 60
   let output = `${months} mėnesiai turi ${minutes} minutes.`
-
   return output
 }
 console.log(monthsToMinutes(3))
 console.groupEnd()
 
 console.groupCollapsed('JS_task_functions_1_8')
-
 function monthsToMinutes(months) {
   let minutes = months * 30 * 24 * 60
   let output = `${months} mėnesiai turi ${minutes} minutes.`
-
   return output
 }
-
 console.groupEnd()
 
 
 
 
 console.groupCollapsed('JS_task_functions_1_8(2)')
-
 function convertDaysToTimeUnits(inputDays) {
   if (typeof inputDays !== 'number') {
     return "Input must be a number.";
   }
-
   const minutes = inputDays * 24 * 60;
   const hours = inputDays * 24;
   const weeks = inputDays / 7;
   const months = inputDays / 30.44; // Approximate days in a month
   const years = inputDays / 365.25; // Accounting for leap years
-
   return `${inputDays} days - ${minutes} minutes`;
 }
-
 const userInput = parseFloat(prompt("Enter the number of days:"));
-
 if (!isNaN(userInput)) {
   const result = convertDaysToTimeUnits(userInput);
   console.log(result);
 } else {
   console.log("Invalid input. Please enter a valid number of days.");
 }
-
 console.groupEnd('JS_task_functions_1_8(2)')
 
 
 
 console.groupCollapsed('JS_task_functions_1_9')
-
-
-
 function arDalinasiIs(dalmuo, daliklis) {
   if (typeof dalmuo !== 'number' || typeof daliklis !== 'number') {
     throw new Error('Abi parametrai turi būti skaičiai.');
   }
-
   if (daliklis === 0) {
     throw new Error('Negalima dalyti iš nulio.');
   }
-
   return dalmuo % daliklis === 0;
 }
-
 const ivestasSkaicius = 11;
 const daliklisSkaicius = 2;
-
 try {
   const rezultatas = arDalinasiIs(ivestasSkaicius, daliklisSkaicius);
 
@@ -155,7 +137,6 @@ try {
 } catch (klaida) {
   console.error(klaida.message);
 }
-
 console.groupEnd()
 
 
