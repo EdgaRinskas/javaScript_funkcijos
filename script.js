@@ -156,5 +156,33 @@ if (result) {
 } else {
   console.log("odd");
 }
-
 console.groupEnd('JS_task_functions_1_10');
+
+
+
+console.groupCollapsed('JS_task_functions_1_11');
+
+
+function extractCharacter(text, index) {
+   if (index < 0) {
+    index = text.length + index;
+  }
+  if (index >= 0 && index < text.length) {
+    const character = text[index];
+    const position = index + 1;
+    console.log(`The ${ordinalSuffix(position)} letter of the word "${text}" is "${character}".`);
+  } else {
+    const textLength = text.length;
+    alert(`Tekstas "${text}" turi ${textLength} simbolius, nurodėte grąžinti ${index + 1}.`);
+  }
+}
+function ordinalSuffix(number) {
+  const suffixes = ['st', 'nd', 'rd'];
+  const remainder = number % 10;
+  return number + (suffixes[remainder - 1] || 'th');
+}
+extractCharacter("Labas", 3); // Output: The 3rd letter of the word "Labas" is "b".
+extractCharacter("Labas", -1); // Output: The 4th letter of the word "Labas" is "s".
+extractCharacter("Labas", 8); // Alert: Tekstas "Labas" turi penkis simbolius, nurodėte grąžinti aštuonis.
+
+console.groupEnd()
